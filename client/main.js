@@ -7,7 +7,7 @@ form.addEventListener('submit', async (e) => {
   const data = new FormData(form);
   const text = data.get('prompt')
 
-  const response = await fetch('http://localhost:8080/dream', {
+  const response = await fetch('/dream', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

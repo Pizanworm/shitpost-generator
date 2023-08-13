@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import { Configuration, OpenAIApi } from 'openai';
 dotenv.config();
+const port = parseInt(process.env.PORT)
 
 
 const configuration = new Configuration({
@@ -30,4 +31,4 @@ app.post('/dream', async (req, res) => {
     res.send({ image });
 });
 
-app.listen(8080, () => console.log('make art on http://localhost:8080/dream'));
+app.listen(port, () => console.log(`make art on http://localhost:${port}/dream`));
