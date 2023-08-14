@@ -15,7 +15,7 @@ const openai = new OpenAIApi(configuration);
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static('client'))
+app.use(express.static('client/dist'))
 
 app.post('/dream', async (req, res) => {
 

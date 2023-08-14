@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm --prefix client run build",
+    "dev:client": "npm --prefix client run dev"
   },
   "devDependencies": {
     "vite": "^4.4.5"
